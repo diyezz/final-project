@@ -1,0 +1,149 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A novel about the American dream and the Roaring Twenties.",
+    "price": 10.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=The+Great+Gatsby"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A novel about racial injustice in the Deep South.",
+    "price": 7.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=To+Kill+a+Mockingbird"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian novel about totalitarianism and surveillance.",
+    "price": 8.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=1984"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "description": "A romantic novel that critiques the British landed gentry.",
+    "price": 6.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=Pride+and+Prejudice"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "description": "A story about teenage angst and alienation.",
+    "price": 9.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=The+Catcher+in+the+Rye"
+  },
+  {
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "description": "An epic tale of the hunt for the elusive white whale.",
+    "price": 11.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=Moby+Dick"
+  },
+  {
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "description": "A historical novel about the French invasion of Russia.",
+    "price": 12.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=War+and+Peace"
+  },
+  {
+    "title": "The Odyssey",
+    "author": "Homer",
+    "description": "An ancient Greek epic poem about the journey of Odysseus.",
+    "price": 5.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=The+Odyssey"
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "A fantasy novel about a hobbit's adventure.",
+    "price": 10.49,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=The+Hobbit"
+  },
+  {
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "description": "A dystopian novel about a future where books are banned.",
+    "price": 8.49,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=Fahrenheit+451"
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "description": "A philosophical novel about vanity and moral duplicity.",
+    "price": 9.49,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=The+Picture+of+Dorian+Gray"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "description": "A dystopian novel set in a technologically advanced future.",
+    "price": 10.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=Brave+New+World"
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "description": "A novel exploring morality and redemption.",
+    "price": 13.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=Crime+and+Punishment"
+  },
+  {
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoevsky",
+    "description": "A philosophical novel dealing with faith and doubt.",
+    "price": 14.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=The+Brothers+Karamazov"
+  },
+  {
+    "title": "The Grapes of Wrath",
+    "author": "John Steinbeck",
+    "description": "A novel about the struggles of the Dust Bowl migrants.",
+    "price": 12.49,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=The+Grapes+of+Wrath"
+  },
+  {
+    "title": "The Adventures of Huckleberry Finn",
+    "author": "Mark Twain",
+    "description": "A novel about a boy's journey down the Mississippi River.",
+    "price": 8.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=The+Adventures+of+Huckleberry+Finn"
+  },
+  {
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "description": "A novel about passion and revenge on the Yorkshire moors.",
+    "price": 11.49,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=Wuthering+Heights"
+  },
+  {
+    "title": "The Scarlet Letter",
+    "author": "Nathaniel Hawthorne",
+    "description": "A novel about sin and redemption in Puritan New England.",
+    "price": 9.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=The+Scarlet+Letter"
+  },
+  {
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "description": "A novel about a woman's quest for independence and love.",
+    "price": 10.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=Jane+Eyre"
+  },
+  {
+    "title": "The Metamorphosis",
+    "author": "Franz Kafka",
+    "description": "A novella about a man who transforms into a giant insect.",
+    "price": 7.49,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=The+Metamorphosis"
+  },
+  {
+    "title": "The Fault in Our Stars",
+    "author": "John Green",
+    "description": "A novel about teenage love and terminal illness.",
+    "price": 8.99,
+    "coverImage": "https://via.placeholder.com/150x200.png?text=The+Fault+in+Our+Stars"
+  }
+]
