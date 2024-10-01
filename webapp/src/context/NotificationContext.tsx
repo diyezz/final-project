@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
-type SetTimeoutType = ReturnType <typeof setTimeout>;
+type SetTimeoutType = ReturnType<typeof setTimeout>;
 
 interface NotificationContextType {
   showNotification: (message: string) => void;
@@ -8,7 +8,7 @@ interface NotificationContextType {
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
-export const NotificationProvider: React.FC<{ children: React.ReactNode}> = ({ children }) => {
+export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [notification, setNotification] = useState<string | null>(null);
   const [isShown, setIsShown] = useState<boolean>(false);
   const [activeTimeout, setActiveTimeout] = useState<SetTimeoutType | null>(null);
@@ -30,16 +30,18 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode}> = ({ c
       dismissNotification();
     }, 3000));
   }
-  
+
   return (
     <NotificationContext.Provider value={{ showNotification }}>
       {children}
 
       {isShown && notification && (
-        <div className='fixed bottom-5 inset-x-2 bg-blue-500 text-white p-4 rounded-lg shadow-lg transition-transform transform translate-y-0'>
-          {notification}
+        <div className='fixed max-w-96 bottom-5 inset-x-2 bg-blue-500 text-white p-4 rounded-lg shadow-lg transition-transform transform translate-y-0'>
+          <div className='w-full relative min-h-12 py-4'>
+            {notification}
 
-          <button onClick={dismissNotification} className='text-white hover:text-gray-200'>Close</button>
+            <button onClick={dismissNotification} className='text-white hover:text-gray-200 absolute top-0 right-0'>x</button>
+          </div>
         </div>
       )}
 
