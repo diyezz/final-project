@@ -16,7 +16,7 @@ const BookList: React.FC = () => {
 
   useEffect(() => {
     const fetchBooks = async () => {
-      const response = await axios.get('/books');
+      const response = await axios().get('/books');
       setBooks(response.data);
     };
 

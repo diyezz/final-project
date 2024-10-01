@@ -8,7 +8,7 @@ interface Order {
 }
 
 const CheckoutPage: React.FC = () => {
-  const { cart } = useCart(); // Access the cart from the CartContext
+  const { cart, clearCart } = useCart(); // Access the cart from the CartContext
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [orderSubmitted, setOrderSubmitted] = useState(false);
 
@@ -28,9 +28,10 @@ const CheckoutPage: React.FC = () => {
     };
 
     try {
-      await axios.post('/orders/add', order);
+      await axios().post('/orders/create', order);
 
       setOrderSubmitted(true);
+      clearCart();
     } catch (error) {
       console.error('Failed to submit order:', error);
     } finally {
@@ -71,24 +72,23 @@ const CheckoutPage: React.FC = () => {
               <span>${totalPrice.toFixed(2)}</span>
             </div>
 
-            {/* Submit Button */}
-            {!orderSubmitted ? (
-              <button
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300 w-full mt-6"
-                onClick={handleOrderSubmit}
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Submitting Order...' : 'Submit Order'}
-              </button>
-            ) : (
-              <p className="text-green-500 text-center font-semibold mt-6">
-                Order Submitted Successfully!
-              </p>
-            )}
+            <button
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300 w-full mt-6"
+              onClick={handleOrderSubmit}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Submitting Order...' : 'Submit Order'}
+            </button>
           </div>
         )}
+
+        {orderSubmitted && (
+          <p className = "text-green-500 text-center font-semibold mt-6">
+            Order Submitted Successfully!
+          </p>
+        )}
       </div>
-    </div>
+    </div >
   );
 };
 

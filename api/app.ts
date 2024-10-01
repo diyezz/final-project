@@ -4,6 +4,7 @@ import cors from "cors";
 import connectDB from "./config/db";
 import bookRoutes from "./routes/bookRoutes";
 import userRoutes from "./routes/userRoutes";
+import orderRoutes from "./routes/orderRoutes";
 import logerMiddleware from "./middleware/logerMiddleware";
 
 dotenv.config();
@@ -21,5 +22,6 @@ app.use(cors(corsConfig));
 app.use(express.json());
 app.use("/api/books", bookRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/orders", orderRoutes);
 
 export default app;

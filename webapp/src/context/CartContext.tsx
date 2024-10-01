@@ -16,6 +16,7 @@ export interface BookInCart extends Book {
 interface CartContextType {
   cart: BookInCart[];
   addToCart: (book: Book) => void;
+  clearCart: () => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -44,8 +45,12 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
+  const clearCart = () => {
+    setCart([]);
+  }
+
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, clearCart }}>
       {children}
     </CartContext.Provider>
   );
