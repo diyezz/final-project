@@ -12,7 +12,7 @@ const authMiddleware = async (req: Request, res: Response, next: NextFunction) =
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_secret_key');
     //@ts-ignore
-    req.user = await User.findOne({ _id: decoded._id });
+    req.user = await User.findOne({ _id: decoded.id });
     next();
   } catch (error) {
     res.status(403).json({ message: 'Forbidden' });

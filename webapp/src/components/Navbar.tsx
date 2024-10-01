@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 
 const Navbar: React.FC = () => {
-  const { isAuthenticated, logout } = useAuth();
 
   return (
     <nav className="bg-blue-500 p-4">
@@ -18,20 +16,9 @@ const Navbar: React.FC = () => {
           <li>
             <Link to="/cart" className="text-white hover:text-gray-300">Cart</Link>
           </li>
-
-          {
-            isAuthenticated && (
-              <div className='flex gap-4'>
-                <li>
-                  <Link to="/profile" className="text-white hover:text-gray-300">Profile</Link>
-                </li>
-                <li>
-                  <button className="text-white " onClick={() => logout()}>Logout</button>
-                </li>
-              </div>
-            )
-          }
-
+          <li>
+            <Link to="/profile" className="text-white hover:text-gray-300">Profile</Link>
+          </li>
         </ul>
       </div>
     </nav>

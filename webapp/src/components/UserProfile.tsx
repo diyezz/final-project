@@ -1,25 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from '../axios.config';
-import { BookInCart } from '../context/CartContext';
 
-interface Order {
-  _id: string;
-  items: BookInCart[];
-  total: number;
-  createdAt: string;
-}
-
-interface UserProfileData {
-  profile: {
-    _id: string;
-    name: string;
-    email: string;
-  };
-  orders: Order[];
-}
 
 const UserProfile: React.FC = () => {
-  const [userData, setUserData] = useState<UserProfileData | null>(null);
+  const [userData, setUserData] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   
@@ -27,7 +11,7 @@ const UserProfile: React.FC = () => {
     const fetchUserProfile = async () => {
       try {
         setLoading(true);
-        const response = await axios().get<UserProfileData>('/users/profile');
+        const response = await axios.get('/users/profile');
         setUserData(response.data);
         setLoading(false);
       } catch (error) {
@@ -58,45 +42,11 @@ const UserProfile: React.FC = () => {
       <div className="bg-white p-6 rounded-lg shadow-md mb-10">
         <h2 className="text-2xl font-semibold mb-4">Profile Information</h2>
         <p className="mb-2">
-          <strong>Name:</strong> {userData.profile._id}
+          <strong>Name:</strong> {userData._id}
         </p>
         <p className="mb-2">
-          <strong>Email:</strong> {userData.profile.email}
+          <strong>Email:</strong> {userData.email}
         </p>
-      </div>
-
-      {/* User Orders Section */}
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold mb-4">Orders</h2>
-        {userData.orders.length === 0 ? (
-          <p>No orders found.</p>
-        ) : (
-          userData.orders.map((order) => (
-            <div key={order._id} className="mb-6 border-b pb-4">
-              <h3 className="text-xl font-semibold mb-2">
-                Order ID: {order._id}
-              </h3>
-              <p className="mb-2">
-                <strong>Order Date:</strong>{' '}
-                {new Date(order.createdAt).toLocaleDateString()}
-              </p>
-              <p className="mb-2">
-                <strong>Total:</strong> ${order.total.toFixed(2)}
-              </p>
-
-              <div>
-                <h4 className="font-semibold">Items:</h4>
-                <ul className="list-disc list-inside">
-                  {order.items.map((item) => (
-                    <li key={item._id} className="ml-5">
-                      {item.title} - {item.quantity} × ${item.price.toFixed(2)}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))
-        )}
       </div>
     </div>
   );

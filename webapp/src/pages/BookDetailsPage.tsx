@@ -11,7 +11,7 @@ const BookDetailsPage: React.FC = () => {
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
-        const response = await axios().get(`/books/${id}`);
+        const response = await axios.get(`/books/${id}`);
         setBook(response.data);
       } catch (error) {
         console.error('Error fetching book details:', error);

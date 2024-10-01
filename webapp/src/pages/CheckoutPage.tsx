@@ -28,7 +28,7 @@ const CheckoutPage: React.FC = () => {
     };
 
     try {
-      await axios().post('/orders/add', order);
+      await axios.post('/orders/add', order);
 
       setOrderSubmitted(true);
     } catch (error) {
